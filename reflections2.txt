@@ -12,13 +12,33 @@ have. It gives us a choice of not commiting everything from working directory to
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+Staging area helps us to add all file changes that correspond to one logical change and make a single commit for all these changes. Had there been no staging area, 
+it is difficult to imagine how this feature would have been accomplished.
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+It will be helpful to test out an experimental feature of an already well established project. It can also be useful for building the project for a different setting whose
+core logic remains the same.  
+
 How do the diagrams help you visualize the branch structure?
+
+It helps me better understand the git log output and why it is totally cool to not bother about someone else (with whom we are collaborating) getting effected by changes made
+by me during a checkout. Basically it makes me more confident on what I am doing, as now I know what's going on!
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+We get the updated branch which reflects the changes (commits) from both the branches. Git uses a strategy be looking into the content of a file before branching and content at
+the tail of both branches to decide what content to keep and what not tot keep. Content common obviously goes together, content added by one of them only remains but anything
+which was present at time of branch and one of them deleted is not retained!
+
+It makes the visualization easier, making it more clear as to what all commits will be part of new master branch and what not.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+Pros:
+Saves time for the user and is convenient.
+Cons:
+Conflict resolution if not noticed properly by git can lead to files in erraneous state.
